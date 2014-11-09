@@ -1,0 +1,24 @@
+[user]
+	name = Giulio Grillanda
+	email = ggrillanda@trulia.com
+[core]
+	excludesfile = /Users/ggrillanda/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = matching
+[alias]
+	st   = status
+	cm   = commit -m
+	reh1 = reset --soft HEAD~1
+	pf   = push -f
+	aa   = add -A
+	br   = branch
+	nb   = checkout -b
+	rb   = pull --rebase
+	co   = checkout 
+	preq = "!f() { git fetch origin refs/pull-requests/$1/from:PR-$1; git co PR-$1; } ; f"  
