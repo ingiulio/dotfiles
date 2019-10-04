@@ -1,16 +1,21 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Giulio Grillanda
+#	email = giulio.grillanda@gmail.com
 [user]
 	name = Giulio Grillanda
-	email = ggrillanda@trulia.com
+	email = giulio.grillanda@gmail.com
 [core]
-	excludesfile = /Users/ggrillanda/.gitignore_global
+	excludesfile = /Users/giulio/.gitignore_global
+	autocrlf = input
+	editor = vim
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[push]
-	default = matching
 [alias]
 	st   = status
 	cm   = commit -m
@@ -20,5 +25,7 @@
 	br   = branch
 	nb   = checkout -b
 	rb   = pull --rebase
-	co   = checkout 
-	preq = "!f() { git fetch origin refs/pull-requests/$1/from:PR-$1; git co PR-$1; } ; f"  
+	co   = checkout
+	preq = "!f() { git fetch origin refs/pull-requests/$1/from:PR-$1; git co PR-$1; } ; f"
+[commit]
+	template = /Users/giulio/.stCommitMsg

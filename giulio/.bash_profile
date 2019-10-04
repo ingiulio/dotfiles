@@ -1,10 +1,17 @@
-export PATH=$PATH:/usr/ggrilanda/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home
-export JAVA_HOME
-export PATH=$PATH:$JAVA_HOME/bin
-
-# Setting PATH for Python 2.7
-# The orginal version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+# Setting PATH for Python 3.6
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
+
+# Setting PATH for Python 3.7
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
+export PATH
+
+# Fastlane
+export PATH="$HOME/.fastlane/bin:$PATH"
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
